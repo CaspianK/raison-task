@@ -21,7 +21,7 @@ import { useRouter } from "vue-router";
 import authService from "../services/authService";
 
 // Filled in the credentials for easy authentication while testing
-const email = ref("maye.quitzon@example.com");
+const email = ref("tianna.turner@example.com");
 const password = ref("password");
 const error = ref("");
 const router = useRouter();
