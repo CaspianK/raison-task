@@ -12,10 +12,6 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 
-    Route::get('/purchases', [PurchaseController::class, 'index']);
-    Route::post('/purchases', [PurchaseController::class, 'store']);
-    Route::put('/purchases/{purchase}', [PurchaseController::class, 'update']);
-
     Route::resource('purchases', PurchaseController::class)->except(['show']);
 
     Route::get('/currencies', [CurrencyController::class, 'index']);
